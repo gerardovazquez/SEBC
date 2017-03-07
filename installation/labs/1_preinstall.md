@@ -620,3 +620,7 @@ Performing an on-line resize of /dev/xvde to 26214400 (4k) blocks.
 The filesystem on /dev/xvde is now 26214400 blocks long.
 ```
 
+# Set local repository
+
+Install http, download parcel files from coudera and point cloudera manager to the URL
+
