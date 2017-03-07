@@ -1,5 +1,5 @@
-54.229.139.196 cloudera01
-54.229.138.245 cloudera02
-54.229.115.231 cloudera03
-54.194.247.49  cloudera04
-54.154.32.43   cloudera05
+34.249.154.85  cloudera01
+34.250.86.128  cloudera02
+34.252.56.113  cloudera03
+34.252.82.134  cloudera04
+34.252.82.82   cloudera05
