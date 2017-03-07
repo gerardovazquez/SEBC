@@ -462,69 +462,76 @@ cp: overwrite `/usr/java/jdk1.8.0_121/jre/lib/security/./US_export_policy.jar'? 
 
 * install Cloudera Manager
 
+  Re-installation with right version (5.8.3)
+
 ```sh
 [root@ip-10-0-1-128 ~]# yum install cloudera-manager-daemons cloudera-manager-server
 Loaded plugins: fastestmirror, presto
 Setting up Install Process
-Loading mirror speeds from cached hostfile
- * base: centos.serverspace.co.uk
- * epel: www.mirrorservice.org
- * extras: mirrors.clouvider.net
- * updates: mirror.vorboss.net
-cloudera-manager                    |  951 B     00:00     
-cloudera-manager/primary            | 4.3 kB     00:00     
-cloudera-manager                                       7/7
+Determining fastest mirrors
+epel/metalink                                                                                                    |  24 kB     00:00     
+ * base: ftp.heanet.ie
+ * epel: mirror.freethought-internet.co.uk
+ * extras: ftp.heanet.ie
+ * updates: ftp.heanet.ie
+base                                                                                                             | 3.7 kB     00:00     
+base/primary_db                                                                                                  | 4.7 MB     00:00     
+cloudera-manager                                                                                                 |  951 B     00:00     
+cloudera-manager/primary                                                                                         | 4.3 kB     00:00     
+cloudera-manager                                                                                                                    7/7
+epel                                                                                                             | 4.3 kB     00:00     
+epel/primary_db                                                                                                  | 5.9 MB     00:00     
+extras                                                                                                           | 3.4 kB     00:00     
+extras/primary_db                                                                                                |  37 kB     00:00     
+mysql-connectors-community                                                                                       | 2.5 kB     00:00     
+mysql-connectors-community/primary_db                                                                            |  13 kB     00:00     
+mysql-tools-community                                                                                            | 2.5 kB     00:00     
+mysql-tools-community/primary_db                                                                                 |  34 kB     00:00     
+mysql55-community                                                                                                | 2.5 kB     00:00     
+mysql55-community/primary_db                                                                                     | 162 kB     00:00     
+updates                                                                                                          | 3.4 kB     00:00     
+updates/primary_db                                                                                               | 5.4 MB     00:00     
 Resolving Dependencies
 --> Running transaction check
----> Package cloudera-manager-daemons.x86_64 0:5.10.0-1.cm5100.p0.85.el6 will be installed
----> Package cloudera-manager-server.x86_64 0:5.10.0-1.cm5100.p0.85.el6 will be installed
+---> Package cloudera-manager-daemons.x86_64 0:5.8.3-1.cm583.p0.8.el6 will be installed
+---> Package cloudera-manager-server.x86_64 0:5.8.3-1.cm583.p0.8.el6 will be installed
 --> Finished Dependency Resolution
 
 Dependencies Resolved
 
-===========================================================
- Package
-   Arch   Version                   Repository        Size
-===========================================================
+========================================================================================================================================
+ Package                                Arch                 Version                               Repository                      Size
+========================================================================================================================================
 Installing:
- cloudera-manager-daemons
-   x86_64 5.10.0-1.cm5100.p0.85.el6 cloudera-manager 586 M
- cloudera-manager-server
-   x86_64 5.10.0-1.cm5100.p0.85.el6 cloudera-manager 8.4 k
+ cloudera-manager-daemons               x86_64               5.8.3-1.cm583.p0.8.el6                cloudera-manager               529 M
+ cloudera-manager-server                x86_64               5.8.3-1.cm583.p0.8.el6                cloudera-manager               8.2 k
 
 Transaction Summary
-===========================================================
+========================================================================================================================================
 Install       2 Package(s)
 
-Total download size: 586 M
-Installed size: 732 M
+Total download size: 529 M
+Installed size: 678 M
 Is this ok [y/N]: y
 Downloading Packages:
 Setting up and reading Presto delta metadata
 Processing delta metadata
-Package(s) data still to download: 586 M
-(1/2): cloudera-manager-daemons-5.1 | 586 MB     00:20     
-(2/2): cloudera-manager-server-5.10 | 8.4 kB     00:00     
------------------------------------------------------------
-Total                       28 MB/s | 586 MB     00:20     
-warning: rpmts_HdrFromFdno: Header V4 DSA/SHA1 Signature, key ID e8f86acd: NOKEY
-Retrieving key from https://archive.cloudera.com/cm5/redhat/6/x86_64/cm/RPM-GPG-KEY-cloudera
-Importing GPG key 0xE8F86ACD:
- Userid: "Yum Maintainer <webmaster@cloudera.com>"
- From  : https://archive.cloudera.com/cm5/redhat/6/x86_64/cm/RPM-GPG-KEY-cloudera
-Is this ok [y/N]: y
+Package(s) data still to download: 529 M
+(1/2): cloudera-manager-daemons-5.8.3-1.cm583.p0.8.el6.x86_64.rpm                                                | 529 MB     00:18     
+(2/2): cloudera-manager-server-5.8.3-1.cm583.p0.8.el6.x86_64.rpm                                                 | 8.2 kB     00:00     
+----------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                    29 MB/s | 529 MB     00:18     
 Running rpm_check_debug
 Running Transaction Test
 Transaction Test Succeeded
 Running Transaction
-  Installing : cloudera-manager-daemons-5.10.0-1.cm5   1/2 
-  Installing : cloudera-manager-server-5.10.0-1.cm51   2/2 
-  Verifying  : cloudera-manager-server-5.10.0-1.cm51   1/2 
-  Verifying  : cloudera-manager-daemons-5.10.0-1.cm5   2/2 
+  Installing : cloudera-manager-daemons-5.8.3-1.cm583.p0.8.el6.x86_64                                                               1/2 
+  Installing : cloudera-manager-server-5.8.3-1.cm583.p0.8.el6.x86_64                                                                2/2 
+  Verifying  : cloudera-manager-server-5.8.3-1.cm583.p0.8.el6.x86_64                                                                1/2 
+  Verifying  : cloudera-manager-daemons-5.8.3-1.cm583.p0.8.el6.x86_64                                                               2/2 
 
 Installed:
-  cloudera-manager-daemons.x86_64 0:5.10.0-1.cm5100.p0.85.el6
-  cloudera-manager-server.x86_64 0:5.10.0-1.cm5100.p0.85.el6
+  cloudera-manager-daemons.x86_64 0:5.8.3-1.cm583.p0.8.el6            cloudera-manager-server.x86_64 0:5.8.3-1.cm583.p0.8.el6           
 
 Complete!
 ```
@@ -535,9 +542,11 @@ Complete!
 [root@ip-10-0-1-128 ~]# service cloudera-scm-server start
 Starting cloudera-scm-server:                              [  OK  ]
 ```
-Fails due database not been created.
+Fails because database has not been created.
 
 * create needed databases
+
+Using the mysql console
 
 ```sh
 mysql> create database amon DEFAULT CHARACTER SET utf8;
@@ -552,15 +561,62 @@ mysql> grant all on metastore.* TO 'hive'@'%' IDENTIFIED BY '*H4rdPassword#';
 mysql> create database sentry DEFAULT CHARACTER SET utf8;
 mysql> grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY '*H4rdPassword#';
 
-create database nav DEFAULT CHARACTER SET utf8;
-grant all on nav.* TO 'nav'@'%' IDENTIFIED BY '*H4rdPassword#';
+mysql> create database nav DEFAULT CHARACTER SET utf8;
+mysql> grant all on nav.* TO 'nav'@'%' IDENTIFIED BY '*H4rdPassword#';
 
-create database navms DEFAULT CHARACTER SET utf8;
-grant all on navms.* TO 'navms'@'%' IDENTIFIED BY '*H4rdPassword#';
+mysql> create database navms DEFAULT CHARACTER SET utf8;
+mysql> grant all on navms.* TO 'navms'@'%' IDENTIFIED BY '*H4rdPassword#';
 
-create database hue;
-grant all on hue.* to 'hue'@'localhost' identified by '*H4rdPassword#';
+mysql> create database hue;
+mysql> grant all on hue.* to 'hue'@'%' identified by '*H4rdPassword#';
 
-create database oozie;
-grant all privileges on oozie.* to 'oozie'@'%' identified by '*H4rdPassword#';
+mysql> create database oozie;
+mysql> grant all privileges on oozie.* to 'oozie'@'%' identified by '*H4rdPassword#';
 ```
+
+Using the setup tool for CM database
+
+```sh
+mysql> grant all on *.* to 'temp'@'%' identified by 'temp' with grant option;
+```
+
+```sh
+[root@ip-10-0-1-128 ~]# /usr/share/cmf/schema/scm_prepare_database.sh mysql -h ip-10-0-1-128.eu-west-1.compute.internal -utemp -ptemp --scm-host ip-10-0-1-128.eu-west-1.compute.internal scm scm '*H4rdPassword#'
+JAVA_HOME=/usr/java/jdk1.8.0_121
+Verifying that we can write to /etc/cloudera-scm-server
+log4j:ERROR Could not find value for key log4j.appender.A
+log4j:ERROR Could not instantiate appender named "A".
+Creating SCM configuration file in /etc/cloudera-scm-server
+Executing:  /usr/java/jdk1.8.0_121/bin/java -cp /usr/share/java/mysql-connector-java.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/schema/../lib/* com.cloudera.enterprise.dbutil.DbCommandExecutor /etc/cloudera-scm-server/db.properties com.cloudera.cmf.db.
+log4j:ERROR Could not find value for key log4j.appender.A
+log4j:ERROR Could not instantiate appender named "A".
+[2017-03-06 23:16:03,933] INFO     0[main] - com.cloudera.enterprise.dbutil.DbCommandExecutor.testDbConnection(DbCommandExecutor.java) - Successfully connected to database.
+All done, your SCM database is configured correctly!
+```
+
+```sh
+mysql> drop user 'temp'@'%';
+```
+
+```sh
+[root@ip-10-0-1-128 ~]# service cloudera-scm-server start
+Starting cloudera-scm-server:                              [  OK  ]
+[root@ip-10-0-1-128 ~]# service cloudera-scm-server status
+cloudera-scm-server (pid  5931) is running...
+```
+
+## install following the wizard
+
+* Use options defined in installation.md
+
+* Fix root partition size problem
+
+```sh
+[root@ip-10-0-1-128 ~]# resize2fs /dev/xvde 
+resize2fs 1.41.12 (17-May-2010)
+Filesystem at /dev/xvde is mounted on /; on-line resizing required
+old desc_blocks = 1, new_desc_blocks = 7
+Performing an on-line resize of /dev/xvde to 26214400 (4k) blocks.
+The filesystem on /dev/xvde is now 26214400 blocks long.
+```
+
