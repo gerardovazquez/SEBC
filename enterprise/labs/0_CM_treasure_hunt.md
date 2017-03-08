@@ -46,7 +46,7 @@ WebHCat Server
 Check documentation https://www.cloudera.com/documentation/enterprise/5-8-x/topics/cm_sg_intro_kerb.html#xd_583c10bfdbd326ba--6eed2fb8-14349d04bee--76dd
 
 You need:
--- Set up a working KDC. Cloudera Manager supports MIT KDC and Active Directory.
--- The KDC should be configured to have non-zero ticket lifetime and renewal lifetime. CDH will not work properly if tickets are not renewable.
--- OpenLdap client libraries should be installed on the Cloudera Manager Server host if you want to use Active Directory. Also, Kerberos client libraries should be installed on ALL hosts.
--- Cloudera Manager needs an account that has permissions to create other accounts in the KDC.
+ Set up a working KDC. Cloudera Manager supports MIT KDC and Active Directory.
+ The KDC should be configured to have non-zero ticket lifetime and renewal lifetime. CDH will not work properly if tickets are not renewable.
+ OpenLdap client libraries should be installed on the Cloudera Manager Server host if you want to use Active Directory. Also, Kerberos client libraries should be installed on ALL hosts.
+ Cloudera Manager needs an account that has permissions to create other accounts in the KDC.

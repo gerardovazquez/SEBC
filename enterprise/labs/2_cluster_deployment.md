@@ -1,11 +1,4 @@
-HTTP/1.1 200 OK
-Expires: Thu, 01-Jan-1970 00:00:00 GMT
-Set-Cookie: CLOUDERA_MANAGER_SESSIONID=ginlmgwappxj7kmvyckzoc1l;Path=/;HttpOnly
-Content-Type: application/json
-Date: Wed, 08 Mar 2017 10:45:15 GMT
-Transfer-Encoding: chunked
-Server: Jetty(6.1.26.cloudera.4)
-
+```json
 {
   "timestamp" : "2017-03-08T10:45:15.636Z",
   "clusters" : [ {
@@ -907,3 +900,4 @@ Server: Jetty(6.1.26.cloudera.4)
     } ]
   }
 }
+```
