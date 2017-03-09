@@ -1,3 +1,6 @@
+# Kerberos client config file
+
+```ini
 [logging]
  default = FILE:/var/log/krb5libs.log
  kdc = FILE:/var/log/krb5kdc.log
@@ -20,3 +23,4 @@
 [domain_realm]
  .example.com = EXAMPLE.COM
  example.com = EXAMPLE.COM
+```

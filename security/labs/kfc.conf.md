@@ -1,3 +1,6 @@
+# KDC config file
+
+```ini
 [kdcdefaults]
  kdc_ports = 88
  kdc_tcp_ports = 88
@@ -12,3 +15,4 @@ EXAMPLE.COM = {
   max_renewable_life = 7d
   max_life = 24h
 }
+```
