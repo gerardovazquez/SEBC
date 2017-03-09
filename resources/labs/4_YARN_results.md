@@ -1,31 +1,46 @@
 # YARN Test results
 
-# Slowest one
+Data from the perfomance CSV file generated with the scripts
+
+## Slowest one
+
+* Teragen
 
 ```sh
-Num_MAP: 1; Num_RED: 1 - MAP: 614 ; RED: 614
-Runining Teragen
-
-real	4m42.965s
-user	0m7.711s
-sys	0m0.912s
-Running Terasort
-
-real	6m44.718s
-user	0m9.810s
-sys	0m1.046s
+Number of MAP: 1
+Number of REDUCE: 5
+Container Memory: 1024
+Time(s): 125
 ```
+
+* Terasort
+
+```sh
+Number of MAP: 9
+Number of REDUCE: 1
+Container Memory: 1024
+Time(s): 179
+```
+
+
 
 # Fastest one
 
-```sh
-Num_MAP: 4; Num_RED: 1 - MAP: 409 ; RED: 409
-Runining Teragen
 
-real	1m17.747s
-user	0m6.849s
-sys	0m0.779s
+* Teragen
+
+```sh
+Number of MAP: 5
+Number of REDUCE: 5
+Container Memory: 1024
+Time(s): 79
 ```
-```sh
 
+* Terasort
+
+```sh
+Number of MAP: 5
+Number of REDUCE: 7
+Container Memory: 768
+Time(s): 110
 ```

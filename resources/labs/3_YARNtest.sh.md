@@ -1,3 +1,8 @@
+# YARN Test script
+
+* Added more mem, map, reduce test and generate CSV file
+
+```sh
 #!/bin/sh
 # Confirm the path values given below correspond to your installation
 
@@ -11,10 +16,10 @@ RECORD_FILE=/home/gerardovazquez/perf-test.csv
 echo Testing loop started on `date`
 
 # Mapper containers
-for i in 1 2 3 4 5 6 7 8    
+for i in 1  3  5  7 9    
 do
    # Reducer containers
-   for j in 1 2 3 4 5 6 7 8 
+   for j in 1  3  5  7 9 
    do                 
       # Container memory
       for k in 512 768 1024
@@ -36,7 +41,7 @@ do
                       51200000 /results/tg-10GB-${i}-${j}-${k} 1>tera_${i}_${j}_${k}.out 2>tera_${i}_${j}_${k}.err
         teragent=$(echo "$(date +%s.%N) - $start" | bc) 
 
-        $(echo "$(date +%s) - $start" | bc)
+        start=$(date +%s)
         echo "Running Terasort" 
         time ${HADOOP}/hadoop jar ${MR}/hadoop-examples.jar terasort \
                      -Dmapreduce.job.maps=$i \
@@ -52,9 +57,10 @@ do
         echo "Removing folders"
         $HADOOP/hadoop fs -rm -r -skipTrash /results/tg-10GB-${i}-${j}-${k}                         
         $HADOOP/hadoop fs -rm -r -skipTrash /results/ts-10GB-${i}-${j}-${k}                 
-        echo "${i},${j},${k},${teragent},${terasortt}" >> ${RECORD_FILE}
+        echo "${i},${j},${k},${teragent%.*},${terasortt%.*}" >> ${RECORD_FILE}
       done
    done
 done
 
 echo Testing loop ended on `date`
+```
