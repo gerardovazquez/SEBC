@@ -1,4 +1,8 @@
+```sh
 [ronaldo@ip-10-0-1-204 ~]$ hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar pi 10 100
+```
+
+```sh
 Number of Maps  = 10
 Samples per Map = 100
 Wrote input for Map #0
@@ -91,4 +95,4 @@ Starting Job
 		Bytes Written=97
 Job Finished in 65.282 seconds
 Estimated value of Pi is 3.14800000000000000000
-[ronaldo@ip-10-0-1-204 ~]$ 
+```
