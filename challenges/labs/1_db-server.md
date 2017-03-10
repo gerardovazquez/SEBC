@@ -28,7 +28,8 @@ mysql> show databases;
 | oozie              |
 | performance_schema |
 | rman               |
+| scm                |
 | sentry             |
 +--------------------+
-8 rows in set (0,00 sec)
+9 rows in set (0,00 sec)
 ```
